@@ -19,6 +19,80 @@ body {
   color: $green;
 }
 //=============================
+.header {
+  max-width: 1440px;
+  margin: 0 auto 6rem;
+  padding: 4rem 15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__nav {
+    display: flex;
+    gap: 4.8rem;
+  }
+  &__link {
+  opacity: 0.9;
+  line-height: 1.2;
+  font-weight: 400;
+  color: $green;
+  &:hover {
+    color: $orange;
+    }
+  }
+  &__tel {
+  line-height: 1.2;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $green;
+  &:hover {
+    color: $orange;
+    }
+  }
+
+  &__cart {
+    display: block;
+    background-image: url('/src/images/header/cart-black.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 3.8rem;
+    height: 3.8rem;
+    border-radius: 100%;
+    background-color: $orange;
+    background-size: 1.7rem 1.5rem;
+    position: relative;
+    border: 1px solid $orange;
+    z-index: 1;
+    &:hover {
+      background-color: $green;
+      border: 1px solid $green;
+    }
+  }
+  &__counter {
+    position: absolute;
+    right: 1rem;
+    top: .3rem;
+    font-size: .8rem;
+    color: $white;
+  }
+  &__item {
+  }
+}
+.logo {
+  display: block;
+  background-image: url('/src/images/header/logo.svg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 12.3rem;
+  height: 3.2rem;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 .main {
   background-image: url('/src/images/header/main.png');
   background-size: cover;
@@ -26,7 +100,7 @@ body {
   background-repeat: no-repeat;
   position: relative;
   padding-bottom: 19rem;
-
+  z-index: 0;
   &__item {
     margin-left: 12rem;
     max-width: 378px;
@@ -125,6 +199,8 @@ body {
       right: 137px;
       width: 11rem;
       height: 12rem;
+      z-index: -1;
+
     }
       &__avocado {
         position: absolute;
@@ -132,6 +208,8 @@ body {
         right: 0;
         width: 18rem;
         height: 19rem;
+        z-index: -1;
+
       }
       &__cucumber {
         position: absolute;
@@ -139,6 +217,8 @@ body {
         left: 724px;
         width: 8rem;
         height: 4rem;
+        z-index: -1;
+
       }
       &__pepper {
         position: absolute;
@@ -146,86 +226,17 @@ body {
         left: 38px;
         width: 9rem;
         height: 7rem;
+        z-index: -1;
+
       }
       &__image_3 {
         position: absolute;
         bottom: 115px;
         left: 0;
+        z-index: -1;
         }
 }
-.header {
-  max-width: 1440px;
-  margin: 0 auto 6rem;
-  padding: 4rem 15px 0 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  &__nav {
-    display: flex;
-    gap: 4.8rem;
-  }
-  &__link {
-  opacity: 0.9;
-  line-height: 1.2;
-  font-weight: 400;
-  color: $green;
-  &:hover {
-    color: $orange;
-    }
-  }
-  &__tel {
-  line-height: 1.2;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: $green;
-  &:hover {
-    color: $orange;
-    }
-  }
 
-  &__cart {
-    display: block;
-    background-image: url('/src/images/header/cart-black.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 3.8rem;
-    height: 3.8rem;
-    border-radius: 100%;
-    background-color: $orange;
-    background-size: 1.7rem 1.5rem;
-    position: relative;
-    border: 1px solid $orange;
-    &:hover {
-      background-color: $green;
-      border: 1px solid $green;
-    }
-  }
-  &__counter {
-    position: absolute;
-    right: 1rem;
-    top: .3rem;
-    font-size: .8rem;
-    color: $white;
-  }
-  &__item {
-  }
-}
-.logo {
-  display: block;
-  background-image: url('/src/images/header/logo.svg');
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 12.3rem;
-  height: 3.2rem;
-}
-.container {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
 .title {
   font-family: $font-cormorant;
   font-weight: 700;
@@ -247,6 +258,11 @@ body {
     line-height: 27px;
     font-weight: 400;
   }
+  &_size-m {
+    font-size: 2.4rem;
+    line-height: 36px;
+    font-weight: 400;
+  }
 }
 .link {
   color: $white;
@@ -259,4 +275,27 @@ body {
   padding: 2.5rem 4.2rem;
   border-radius: 3.8rem;
   box-shadow: 0px 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
+}
+
+
+// 2 BLOOCK =============================================================================================
+.offer {
+  background-image: url('/src/images/offer/offer.png');
+  background-size: cover;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  padding-top: .5rem;
+  padding-bottom: 200px;
+  &__text {
+    margin-top: 20px;
+    max-width: 700px;
+  }
+}
+.title {
+
+  &__block {
+  }
+
+  &__span {
+  }
 }

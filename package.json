@@ -23,6 +23,9 @@
   },
   "dependencies": {
     "html-webpack-plugin": "^5.5.3",
-    "normalize.css": "^8.0.1"
+    "navigation": "^6.2.0",
+    "normalize.css": "^8.0.1",
+    "pagination": "^0.4.6",
+    "swiper": "^11.0.5"
   }
 }
