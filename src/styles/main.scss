@@ -69,24 +69,56 @@ body {
   &__text {
   }
   &__btn {
-    width: 11px;
-    height: 11px;
-    border-radius: 100%;
-    background-color: $green;
-    box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
+    background-color: transparent;
     position: absolute;
+    color: $green;
+    text-align: left;
+    &:hover {
+      .main__btn {
+        &::before {
+          background-color: $orange;
+          box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
+        }
+      }
+    }
+    &::before {
+      content: '';
+      background-color: $green;
+      width: 11px;
+      height: 11px;
+      box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
+      border-radius: 100%;
+      position: absolute;
+    }
+
     &_01 {
-      top: 100px;
-      left: 113px;
+      top: 57px;
+      left: 73px;
+      &::before {
+        top: 15px;
+        left: 72px;
+      }
     }
     &_02 {
-      bottom: 50px;
-      right: 175px;
+      bottom: 564px;
+      right: 73px;
+      &::before {
+        bottom: -22px;
+        right: 20px;
+      }
     }
     &_03 {
-      top: 190px;
-      right: 105px;
+      top: 765px;
+      right: 254px;
+      &::before {
+        top: -22px;
+        right: 20px;
+      }
     }
+  }
+  &__food {
+    display: block;
+    color: rgba($green, 0.8);
   }
     &__tomato {
       position: absolute;
@@ -120,10 +152,7 @@ body {
         position: absolute;
         bottom: 115px;
         left: 0;
-        //width: 50%;
-        //height: 10rem;
         }
-      
 }
 .header {
   max-width: 1440px;
@@ -180,28 +209,7 @@ body {
     font-size: .8rem;
     color: $white;
   }
-
-  &__nav {
-  }
-
-
   &__item {
-  }
-
-
-  &__link {
-  }
-
-
-  &__tel {
-  }
-
-
-  &__cart {
-  }
-
-
-  &__counter {
   }
 }
 .logo {
