@@ -21,7 +21,7 @@ body {
 //=============================
 .header {
   max-width: 1440px;
-  margin: 0 auto 6rem;
+  margin: 0 auto 4.8rem;
   padding: 4rem 15px 0 15px;
   display: flex;
   justify-content: space-between;
@@ -29,6 +29,7 @@ body {
   &__nav {
     display: flex;
     gap: 4.8rem;
+    margin-right: 58px;
   }
   &__link {
   opacity: 0.9;
@@ -63,6 +64,7 @@ body {
     position: relative;
     border: 1px solid $orange;
     z-index: 1;
+    margin-left: 20px;
     &:hover {
       background-color: $green;
       border: 1px solid $green;
@@ -102,9 +104,8 @@ body {
   padding-bottom: 19rem;
   z-index: 0;
   &__item {
-    margin-left: 12rem;
+    margin-left: 12.3rem;
     max-width: 378px;
-
   }
   &__link {
     margin-top: 60px;
@@ -242,6 +243,9 @@ body {
   font-weight: 700;
   font-size: 8rem;
   margin-bottom: 6rem;
+  &__block {
+    margin-left: .4rem;
+  }
   &__span {
     font-style: italic;
   }
@@ -281,6 +285,7 @@ body {
 // 2 BLOOCK =============================================================================================
 .title {
   &__block {
+    margin-top: 1.1rem;
   }
 
   &__span {
@@ -425,32 +430,93 @@ body {
 }
 .swiper-pagination {
   margin-top: 250px;
+  padding-top: 200px;
   //display: none;
 }
 /// 3 section =============================================================
-
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 .about {
-  margin-top: 60px;
-  max-width: 455px;
+  //padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 150px;
   &__text {
   }
 
   &__title {
+    max-width: 450px;
   }
 
   &__item {
+    position: relative;
   }
 
   &__subtitle {
+    margin-left: 122px;
+    width: 625px;
   }
 
   &__list {
+    display: flex;
+    gap: 90px;
+    margin-top: 191px;
+    padding-left: 236px;
   }
-
-  &__img {
+  &__icon {
+    width: 87px;
+    height: 87px;
+    box-shadow: 0 0 0 1px $green;
+    //opacity: .4;
+    border-radius: 50%;
+    margin-bottom: 1rem;
   }
-
+  &__fruits {
+    &::before {
+      content: '';
+      width: 87px;
+      height: 87px;
+      background-image: url('/src/images/about/fruits.svg');
+      background-repeat: no-repeat;
+      top: 2rem;
+      left: 2rem;
+      position: absolute;
+    }
+  }
+  &__good {
+    &::before {
+      content: '';
+      width: 87px;
+      height: 87px;
+      background-image: url('/src/images/about/traditional.svg');
+      background-repeat: no-repeat;
+      top: 23px;
+      left: 23px;
+      position: absolute;
+    }
+  }
+  &__traditional {
+    &::before {
+      content: '';
+      width: 87px;
+      height: 87px;
+      background-image: url('/src/images/about/good.svg');
+      background-repeat: no-repeat;
+      top: 20px;
+      left: 20px;
+      position: absolute;
+    }
+  }
   &__slogan {
+    font-family: $font-cormorant;
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 700;
+    font-style: italic;
   }
 }
 .title {
