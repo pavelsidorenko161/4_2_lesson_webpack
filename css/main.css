@@ -276,10 +276,6 @@ body {
   margin-bottom: 100px;
   max-width: 700px;
 }
-.offer__slider {
-  overflow: hidden;
-}
-
 .swiper-slide {
   overflow: initial;
   height: 520px;
@@ -294,14 +290,11 @@ body {
   position: relative;
   z-index: 0;
 }
-.swiper-slide:hover {
-  box-shadow: 0 0 0 2px rgba(39, 48, 15, 0.4) inset;
-}
-.swiper-slide:hover .swiper-slide__hover {
+.swiper-slide_white:hover .swiper-slide__hover {
   height: 233px;
   opacity: 1;
 }
-.swiper-slide:hover .swiper-slide__hover::after {
+.swiper-slide_white:hover::after {
   content: "";
   background-color: rgba(255, 255, 255, 0.55);
   width: calc(100% - 4px);
@@ -311,6 +304,9 @@ body {
   left: 2px;
   border-radius: 2rem;
   z-index: -1;
+}
+.swiper-slide:hover {
+  box-shadow: 0 0 0 2px rgba(39, 48, 15, 0.4) inset;
 }
 .swiper-slide__milk {
   background: url("/src/images/offer/milk.png");
@@ -353,7 +349,6 @@ body {
   font-size: 30px;
   line-height: 1.2;
   font-weight: 700;
-  margin-top: 75px;
   margin-bottom: 0;
   color: #27300f;
 }
@@ -411,6 +406,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 150px;
+  align-items: center;
 }
 .about__title {
   max-width: 450px;
@@ -420,7 +416,7 @@ body {
 }
 .about__subtitle {
   margin-left: 122px;
-  width: 625px;
+  flex-basis: 625px;
 }
 .about__list {
   display: flex;
@@ -431,8 +427,8 @@ body {
 .about__icon {
   width: 87px;
   height: 87px;
-  box-shadow: 0 0 0 1px #27300f;
-  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(39, 48, 15, 0.4);
+  border-radius: 100%;
   margin-bottom: 1rem;
 }
 .about__fruits::before {
@@ -471,4 +467,82 @@ body {
   line-height: 1.2;
   font-weight: 700;
   font-style: italic;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.trends {
+  margin-bottom: 200px;
+}
+.trends__slide {
+  height: 685px;
+}
+.trends__subtitle {
+  width: 255px;
+}
+
+.swiper-slide__title {
+  margin-bottom: 35px;
+}
+.swiper-slide__cover {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 293px;
+  text-align: center;
+}
+.swiper-slide__price {
+  margin-top: 35px;
+  margin-bottom: 40px;
+}
+.swiper-slide__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trends__subtitle_top {
+  margin-bottom: 90px;
+}
+
+.counter {
+  display: flex;
+  justify-content: space-between;
+}
+.counter__btn {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #27300f;
+  background-color: transparent;
+  padding: 0;
+  background-position: center center;
+  border-radius: 100%;
+}
+.counter__minus {
+  pointer-events: none;
+  background-image: url("/src/images/trends/minus.svg");
+  background-size: 20px 15px;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+.counter__input {
+  width: 46px;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  font-weight: 400;
+  text-align: center;
+}
+.counter__plus {
+  background-image: url("/src/images/trends/plus.svg");
+  background-size: 30px 25px;
+  background-repeat: no-repeat;
+}
+
+.link {
+  padding: 26px 47px;
 }

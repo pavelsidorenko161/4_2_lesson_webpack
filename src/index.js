@@ -18,3 +18,13 @@ var swiper = new Swiper(".offerSwiper", {
   },
   modules: [Navigation, Pagination],
 });
+
+var swiper = new Swiper(".trendsSwiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  modules: [Navigation, Pagination],
+});

@@ -305,9 +305,6 @@ body {
   }
   &__description_size-m{
   }
-  &__slider {
-    overflow: hidden;
-  }
 }
 .offerSwiper {
 }
@@ -327,11 +324,12 @@ body {
   justify-content: flex-end;
   position: relative;
   z-index: 0;
-  &:hover {
-    box-shadow: 0 0 0 2px rgb($green, 0.4) inset;
-    .swiper-slide__hover {
-      height: 233px;
-      opacity: 1;
+  &_white {
+    &:hover {
+      .swiper-slide__hover {
+        height: 233px;
+        opacity: 1;
+      }
       &::after {
         content: '';
         background-color: rgba($white, .55);
@@ -344,6 +342,9 @@ body {
         z-index: -1;
       }
     }
+  }
+  &:hover {
+    box-shadow: 0 0 0 2px rgb($green, 0.4) inset;
 }
   &__milk {
     background: url('/src/images/offer/milk.png');
@@ -386,7 +387,7 @@ body {
     font-size: 30px;
     line-height: 1.2;
     font-weight: 700;
-    margin-top: 75px;
+    //margin-top: 75px;
     margin-bottom: 0;
     color: $green;
   }
@@ -433,7 +434,7 @@ body {
   padding-top: 200px;
   //display: none;
 }
-/// 3 section =============================================================
+/// 3 section ====================================================================================================
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -445,6 +446,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 150px;
+  align-items: center;
   &__text {
   }
 
@@ -458,7 +460,7 @@ body {
 
   &__subtitle {
     margin-left: 122px;
-    width: 625px;
+    flex-basis: 625px;
   }
 
   &__list {
@@ -470,9 +472,9 @@ body {
   &__icon {
     width: 87px;
     height: 87px;
-    box-shadow: 0 0 0 1px $green;
+    box-shadow: 0 0 0 1px rgb($green, 0.4);
     //opacity: .4;
-    border-radius: 50%;
+    border-radius: 100%;
     margin-bottom: 1rem;
   }
   &__fruits {
@@ -481,6 +483,7 @@ body {
       width: 87px;
       height: 87px;
       background-image: url('/src/images/about/fruits.svg');
+      //background-size: 44px 42px;
       background-repeat: no-repeat;
       top: 2rem;
       left: 2rem;
@@ -529,4 +532,82 @@ body {
 
   &_size-s {
   }
+}
+// 3 section ======================================================================================================
+.slider {
+  overflow: hidden;
+}
+.trends {
+  margin-bottom: 200px;
+  &__slide {
+    height: 685px;
+  }
+  &__subtitle {
+    width: 255px;
+  }
+}
+.swiper-slide {
+  &__title {
+    margin-bottom: 35px;
+  }
+  &__cover {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 293px;
+    text-align: center;
+  }
+  &__image {
+    //height: 100%;
+  }
+  &__price {
+    margin-top: 35px;
+    margin-bottom: 40px;
+  }
+  &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+}
+.trends__subtitle_top {
+  margin-bottom: 90px;
+}
+.counter {
+  display: flex;
+  justify-content: space-between;
+  &__btn {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: 1px solid $green;
+    background-color: transparent;
+    padding: 0;
+    background-position: center center;
+    border-radius: 100%;
+  }
+  &__minus {
+    pointer-events: none;
+    background-image: url('/src/images/trends/minus.svg');
+    background-size: 20px 15px;
+    background-repeat: no-repeat;
+    opacity: .4;
+  }
+  &__input {
+    width: 46px;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    font-weight: 400;
+    text-align: center;
+      }
+  &__plus {
+    background-image: url('/src/images/trends/plus.svg');
+    background-size: 30px 25px;
+    background-repeat: no-repeat;
+  }
+}
+.link {
+  padding: 26px 47px;
 }
