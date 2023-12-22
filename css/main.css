@@ -679,3 +679,60 @@ body {
 .link_min {
   padding: 16px 22px;
 }
+
+.money {
+  margin-bottom: 210px;
+}
+.money__text {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.money-left {
+  width: 567px;
+}
+.money-left__one {
+  margin-bottom: 40px;
+}
+.money-left__btn {
+  text-decoration: underline;
+  color: #27300f;
+}
+
+.money-right {
+  width: 467px;
+}
+.money-right__one {
+  margin-bottom: 50px;
+}
+.money-right__span {
+  color: #d26a22;
+}
+.money-right__image {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 27px;
+  opacity: 0.4;
+}
+.money-right__card {
+  width: 53px;
+  height: 32px;
+  background-image: url("/src/images/money/mastercard.png");
+}
+.money-right__card:hover {
+  opacity: 1;
+}
+.money-right__visa {
+  width: 74px;
+  height: 23px;
+  background-image: url("/src/images/money/visa.png");
+}
+.money-right__pal {
+  width: 87px;
+  height: 24px;
+  background-image: url("/src/images/money/paypal.png");
+}

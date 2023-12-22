@@ -769,3 +769,81 @@ margin-bottom: 75px;
     padding: 16px 22px;
   }
 }
+// MANEY ================================================================================================
+.money {
+  margin-bottom: 210px;
+  &__pay {
+  }
+
+  &__title {
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+.title {
+}
+.money-left {
+  width: 567px;
+
+  &__one {
+    margin-bottom: 40px;
+  }
+
+  &__two {
+
+  }
+  &__btn {
+  text-decoration: underline;
+  color: $green;
+  }
+}
+.money-right {
+  width: 467px;
+  &__one {
+    margin-bottom: 50px;
+  }
+
+  &__span {
+    color: #d26a22;
+  }
+
+  &__image {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 27px;
+    opacity: .4;
+
+  }
+
+  &__card {
+    width: 53px;
+    height: 32px;
+    background-image: url('/src/images/money/mastercard.png');
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__visa {
+    width: 74px;
+    height: 23px;
+    background-image: url('/src/images/money/visa.png');
+    &:hover {
+      //opacity: 1;
+    }
+  }
+
+  &__pal {
+    width: 87px;
+    height: 24px;
+    background-image: url('/src/images/money/paypal.png');
+
+  }
+}
